@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="./favicon.ico" />
+    <!-- Preload is necessary because we show these images when we disconnect from the server,
+    but at that point we cannot load these images from the server -->
+    <link rel="preload" href="./assets/gradient-yHQUC_QB.png" as="image" />
+    <link rel="preload" href="./assets/noise-60BoTA8O.png" as="image" />
+    <!-- Preload the fonts -->
+    <link rel="preload" href="./assets/Lora-VariableFont_wght-B2ootaw-.ttf" as="font" crossorigin="anonymous" />
+    <link rel="preload" href="./assets/PTSans-Regular-CxL0S8W7.ttf" as="font" crossorigin="anonymous" />
+    <link rel="preload" href="./assets/PTSans-Bold-D9fedIX3.ttf" as="font" crossorigin="anonymous" />
+    <link rel="preload" href="./assets/FiraMono-Regular-BTCkDNvf.ttf" as="font" crossorigin="anonymous" />
+    <link rel="preload" href="./assets/FiraMono-Medium-DU3aDxX5.ttf" as="font" crossorigin="anonymous" />
+    <link rel="preload" href="./assets/FiraMono-Bold-CLVRCuM9.ttf" as="font" crossorigin="anonymous" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="a marimo app" />
+    <link rel="apple-touch-icon" href="./apple-touch-icon.png" />
+    <link rel="manifest" href="./manifest.json" />
+
+    <script data-marimo="true">
+      function __resizeIframe(obj) {
+        var scrollbarHeight = 20; // Max between windows, mac, and linux
+
+        function setHeight() {
+          var element = obj.contentWindow.document.documentElement;
+          // If there is no vertical scrollbar, we don't need to resize the iframe
+          if (element.scrollHeight === element.clientHeight) {
+            return;
+          }
+
+          // Create a new height that includes the scrollbar height if it's visible
+          var hasHorizontalScrollbar = element.scrollWidth > element.clientWidth;
+          var newHeight = element.scrollHeight + (hasHorizontalScrollbar ? scrollbarHeight : 0);
+
+          // Only update the height if it's different from the current height
+          if (obj.style.height !== `${newHeight}px`) {
+            obj.style.height = `${newHeight}px`;
+          }
+        }
+
+        // Resize the iframe to the height of the content and bottom scrollbar height
+        setHeight();
+
+        // Resize the iframe when the content changes
+        const resizeObserver = new ResizeObserver((entries) => {
+          setHeight();
+        });
+        resizeObserver.observe(obj.contentWindow.document.body);
+      }
+    </script>
+    <marimo-filename hidden>notebook.py</marimo-filename>
+    <marimo-mode data-mode='read' hidden></marimo-mode>
+    <marimo-version data-version='0.13.14' hidden></marimo-version>
+    <marimo-user-config data-config='{"completion": {"activate_on_typing": true, "copilot": false}, "display": {"theme": "light", "code_editor_font_size": 14, "cell_output": "above", "default_width": "medium", "dataframes": "rich", "default_table_page_size": 10}, "formatting": {"line_length": 79}, "keymap": {"preset": "default", "overrides": {}}, "runtime": {"auto_instantiate": true, "auto_reload": "off", "reactive_tests": true, "on_cell_change": "autorun", "watcher_on_save": "lazy", "output_max_bytes": 8000000, "std_stream_max_bytes": 1000000, "default_sql_output": "auto"}, "save": {"autosave": "off", "autosave_delay": 1000, "format_on_save": false}, "package_management": {"manager": "pip"}, "server": {"browser": "default", "follow_symlink": false}, "language_servers": {"pylsp": {"enabled": true, "enable_mypy": true, "enable_ruff": true, "enable_flake8": false, "enable_pydocstyle": false, "enable_pylint": false, "enable_pyflakes": false}}, "snippets": {"custom_paths": [], "include_default_snippets": true}}' data-overrides='{}' hidden></marimo-user-config>
+    <marimo-app-config data-config='{"width": "compact", "layout_file": "data:application/json;base64,ewogICJ0eXBlIjogInNsaWRlcyIsCiAgImRhdGEiOiB7fQp9Cg==", "sql_output": "auto"}' hidden></marimo-app-config>
+    <marimo-server-token data-token='123' hidden></marimo-server-token>
+    <title>notebook</title>
+    <script type="module" crossorigin src="./assets/index-Bxljoz45.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-C5h_lHQT.css">
+  <marimo-wasm hidden=""></marimo-wasm>
+    <script>
+        if (window.location.protocol === 'file:') {
+            alert('Warning: This file must be served by an HTTP server to function correctly.');
+        }
+    </script>
+    
+    <style>
+        #save-button {
+            display: none !important;
+        }
+        #filename-input {
+            display: none !important;
+        }
+    </style>
+    <marimo-code hidden="" data-show-code="false">import%20marimo%0A%0A__generated_with%20%3D%20%220.13.14%22%0Aapp%20%3D%20marimo.App(%0A%20%20%20%20layout_file%3D%22data%3Aapplication%2Fjson%3Bbase64%2CewogICJ0eXBlIjogInNsaWRlcyIsCiAgImRhdGEiOiB7fQp9Cg%3D%3D%22%2C%0A)%0A%0A%0A%40app.cell(hide_code%3DTrue)%0Adef%20_(leaves%2C%20mo)%3A%0A%20%20%20%20mo.md(%0A%20%20%20%20%20%20%20%20f%22%22%22%0A%20%20%20%20%20%20%20%20%23%20marimo%20slides!%20%7B%22%F0%9F%8D%83%22%20*%20leaves.value%7D%0A%0A%20%20%20%20%20%20%20%20**A%20presentation%20by%20the%20marimo%20team.**%0A%0A%20%20%20%20%20%20%20%20%7Bleaves%7D%0A%20%20%20%20%20%20%20%20%22%22%22%0A%20%20%20%20).left().center()%0A%20%20%20%20return%0A%0A%0A%40app.cell%0Adef%20_(mo)%3A%0A%20%20%20%20leaves%20%3D%20mo.ui.slider(1%2C%2012)%0A%20%20%20%20return%20(leaves%2C)%0A%0A%0A%40app.cell(hide_code%3DTrue)%0Adef%20_(mo)%3A%0A%20%20%20%20mo.md(%0A%20%20%20%20%20%20%20%20r%22%22%22%0A%20%20%20%20**marimo**%20is%20an%20open-source%20Python%20notebook%20that's%20reproducible%2C%20shareable%20as%20an%20app%2C%20and%20executable%20as%20a%20script.%0A%0A%20%20%20%20Install%20it%20with%20%60pip%20install%20marimo%60%2C%20and%20learn%20more%20at%20%5BGitHub%5D(https%3A%2F%2Fgithub.com%2Fmarimo-team%2Fmarimo).%0A%0A%20%20%20%20Starting%20with%20**v0.7.2**%2C%20every%20marimo%20notebook%20can%20be%20shared%20as%20an%20interactive%20slide%20deck.%0A%0A%20%20%20%20**In%20fact%2C%20this%20slide%20deck%20was%20made%20with%20a%20marimo%20notebook!**%20To%20present%20your%20notebook%20as%20slides%2C%20just%20toggle%20the%20app%20view%20and%20choose%20the%20slide%20layout%20in%20the%20top%20right.%20Every%20cell%20with%20an%20output%20becomes%20its%20own%20slide.%0A%0A%20%20%20%20Next%20are%20a%20couple%20of%20examples%20of%20dynamic%20slides.%0A%20%20%20%20%22%22%22%0A%20%20%20%20)%0A%20%20%20%20return%0A%0A%0A%40app.cell%0Adef%20_(mo)%3A%0A%20%20%20%20mo.md(r%22%23%23%20Dynamic%20plots%22).center()%0A%20%20%20%20return%0A%0A%0A%40app.cell%0Adef%20_(mo)%3A%0A%20%20%20%20exponent%20%3D%20mo.ui.slider(1%2C%203%2C%20label%3D%22exponent%22)%0A%20%20%20%20return%20(exponent%2C)%0A%0A%0A%40app.cell%0Adef%20_(exponent%2C%20mo%2C%20np)%3A%0A%20%20%20%20x%20%3D%20np.linspace(-3%2C%203%2C%20100)%0A%20%20%20%20y%20%3D%20x**exponent.value%0A%0A%20%20%20%20mo.md(%0A%20%20%20%20%20%20%20%20rf%22%22%22%0A%20%20%20%20%20%20%20%20%7Bexponent%7D%0A%0A%20%20%20%20%20%20%20%20%5C%5B%0A%20%20%20%20%20%20%20%20y%20%3D%20x%5E%7Bexponent.value%7D%0A%20%20%20%20%20%20%20%20%5C%5D%0A%0A%20%20%20%20%20%20%20%20%7Bmo.as_html(make_plot(x%2C%20y))%7D%0A%20%20%20%20%20%20%20%20%22%22%22%0A%20%20%20%20).center()%0A%20%20%20%20return%0A%0A%0A%40app.function%0Adef%20make_plot(x%2C%20y)%3A%0A%20%20%20%20import%20matplotlib.pyplot%20as%20plt%0A%0A%20%20%20%20plt.plot(x%2C%20y)%0A%20%20%20%20plt.ylim(-27%2C%2027)%0A%20%20%20%20plt.xlim(-3%2C%203)%0A%20%20%20%20return%20plt.gca()%0A%0A%0A%40app.cell%0Aasync%20def%20_()%3A%0A%20%20%20%20df%20%3D%20await%20make_data()%0A%20%20%20%20return%20(df%2C)%0A%0A%0A%40app.cell%0Adef%20_(mo)%3A%0A%20%20%20%20mo.md(%22%22%22%23%20Select%20data%20in%20plots%22%22%22)%0A%20%20%20%20return%0A%0A%0A%40app.cell%0Adef%20_(df%2C%20mo)%3A%0A%20%20%20%20import%20altair%20as%20alt%0A%0A%20%20%20%20chart%20%3D%20mo.ui.altair_chart(%0A%20%20%20%20%20%20%20%20alt.Chart(df)%0A%20%20%20%20%20%20%20%20.mark_circle(size%3D60)%0A%20%20%20%20%20%20%20%20.encode(%0A%20%20%20%20%20%20%20%20%20%20%20%20x%3D%22Horsepower%22%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20y%3D%22Miles_per_Gallon%22%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20color%3D%22Origin%22%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20tooltip%3D%5B%22Name%22%2C%20%22Origin%22%2C%20%22Horsepower%22%2C%20%22Miles_per_Gallon%22%5D%2C%0A%20%20%20%20%20%20%20%20)%0A%20%20%20%20)%0A%20%20%20%20return%20(chart%2C)%0A%0A%0A%40app.cell%0Adef%20_(chart%2C%20mo)%3A%0A%20%20%20%20mo.vstack(%5Bmo.md(%22**Click%20and%20drag%20to%20select%20data.**%22)%2C%20chart%2C%20chart.value%5D)%0A%20%20%20%20return%0A%0A%0A%40app.function%0Aasync%20def%20make_data()%3A%0A%20%20%20%20try%3A%0A%20%20%20%20%20%20%20%20import%20micropip%0A%0A%20%20%20%20%20%20%20%20await%20micropip.install(%22vega_datasets%22)%0A%20%20%20%20finally%3A%0A%20%20%20%20%20%20%20%20...%0A%0A%20%20%20%20from%20vega_datasets%20import%20data%0A%0A%20%20%20%20return%20data.cars()%0A%0A%0A%40app.cell%0Adef%20_(mo)%3A%0A%20%20%20%20mo.md(r%22%22%22%23%23%20Thanks!%22%22%22)%0A%20%20%20%20return%0A%0A%0A%40app.cell%0Adef%20_()%3A%0A%20%20%20%20import%20numpy%20as%20np%0A%0A%20%20%20%20return%20(np%2C)%0A%0A%0A%40app.cell%0Adef%20_()%3A%0A%20%20%20%20import%20marimo%20as%20mo%0A%0A%20%20%20%20return%20(mo%2C)%0A%0A%0Aif%20__name__%20%3D%3D%20%22__main__%22%3A%0A%20%20%20%20app.run()%0A</marimo-code></head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
