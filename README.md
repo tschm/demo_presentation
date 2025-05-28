@@ -1,4 +1,4 @@
-# 📄 [demo_presentation](https://tschm.github.io/demo_presentation/book)
+# 📄 [demo_presentation](https://tschm.github.io/demo_presentation)
 
 [![Created with qCradle](https://img.shields.io/badge/Created%20with-qCradle-blue?style=flat-square)](https://github.com/tschm/presentation)
 
