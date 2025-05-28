@@ -41,8 +41,8 @@ help:  ## Display this help screen
 
 # Mark 'marimo' as a phony target
 .PHONY: marimo
-marimo: ## Install Marimo
-	@uv run marimo edit marimo  # Start Marimo in edit mode, opening the book/marimo directory
+marimo: ## edit the notebook
+	@uv run marimo edit marimo/notebook.py  # Start Marimo in edit mode, opening the book/marimo directory
 
 # Run Marimo in presentation mode
 .PHONY: presentation
