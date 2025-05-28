@@ -21,7 +21,6 @@ template for creating your own interactive presentations.
 ## 🔧 Prerequisites
 
 - Python 3.12 or higher
-- pip or [uv](https://astral.sh/uv) package manager
 - Git (for cloning the repository)
 
 ## 🚀 Getting Started
@@ -44,6 +43,7 @@ template for creating your own interactive presentations.
    This will:
 
    - Create a Python 3.12 virtual environment using uv
+     (which is installed on the fly)
    - Install all required dependencies from requirements.txt
 
 ### Running the Presentation
