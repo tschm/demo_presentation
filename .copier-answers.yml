@@ -1,0 +1,11 @@
+_commit: v0.0.1
+_src_path: git@github.com:tschm/presentation.git
+description: Demo presentation
+gh_create: gh repo create tschm/demo_presentation --public --description 'Demo presentation'
+page: https://tschm.github.io/demo_presentation
+project_name: demo_presentation
+repository: https://github.com/tschm/demo_presentation
+ssh_uri: git@github.com:tschm/demo_presentation.git
+status: public
+use_renovate: true
+username: tschm
